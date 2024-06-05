@@ -1,0 +1,1 @@
+2024-06-05T07:13:44.586Z - ERROR   : [index.js] failure initializing front-end: listen EADDRINUSE: address already in use 0.0.0.0:4444

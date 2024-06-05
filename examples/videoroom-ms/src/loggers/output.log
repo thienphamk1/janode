@@ -1,0 +1,113 @@
+2024-06-05T07:13:44.550Z - INFO    : [index.js] initializing socketio front end...
+2024-06-05T07:13:44.581Z - INFO    : [index.js] scheduled connection in 1 seconds
+2024-06-05T07:13:45.590Z - INFO    : [index.js] connecting Janode...
+2024-06-05T07:13:45.596Z - INFO    : [janode.js] creating new connection
+2024-06-05T07:13:45.598Z - INFO    : [tmanager.js] [3376647481708209] creating new transaction manager (debug=false)
+2024-06-05T07:13:45.599Z - INFO    : [transport-ws.js] [3376647481708210] trying connection with ws://127.0.0.1:8188/
+2024-06-05T07:13:45.689Z - INFO    : [transport-ws.js] [3376647481708210] websocket connected
+2024-06-05T07:13:45.690Z - INFO    : [transport-ws.js] [3376647481708210] websocket ping task scheduled every 10 seconds
+2024-06-05T07:13:45.694Z - INFO    : [index.js] connection with Janus created
+2024-06-05T07:13:45.694Z - INFO    : [connection.js] [3376647481708210] creating new session
+2024-06-05T07:13:45.714Z - INFO    : [session.js] [5506922848149137] session keep-alive task scheduled every 30000 milliseconds
+2024-06-05T07:13:45.714Z - INFO    : [connection.js] [3376647481708210] session created (id=5506922848149137)
+2024-06-05T07:13:45.715Z - INFO    : [index.js] session 5506922848149137 with Janus created
+2024-06-05T07:13:45.715Z - INFO    : [session.js] [5506922848149137] attaching new handle
+2024-06-05T07:13:45.765Z - INFO    : [session.js] [5506922848149137] handle attached (id=6261489548527529)
+2024-06-05T07:13:45.765Z - INFO    : [index.js] manager handle 6261489548527529 attached
+2024-06-05T07:14:21.730Z - INFO    : [index.js] initializing socketio front end...
+2024-06-05T07:14:21.751Z - INFO    : [index.js] scheduled connection in 1 seconds
+2024-06-05T07:14:21.759Z - INFO    : [index.js] server listening on http://0.0.0.0:4444/janode
+2024-06-05T07:14:22.761Z - INFO    : [index.js] connecting Janode...
+2024-06-05T07:14:22.762Z - INFO    : [janode.js] creating new connection
+2024-06-05T07:14:22.765Z - INFO    : [tmanager.js] [1593825823191681] creating new transaction manager (debug=false)
+2024-06-05T07:14:22.767Z - INFO    : [transport-ws.js] [1593825823191682] trying connection with ws://127.0.0.1:8188/
+2024-06-05T07:14:22.831Z - INFO    : [transport-ws.js] [1593825823191682] websocket connected
+2024-06-05T07:14:22.832Z - INFO    : [transport-ws.js] [1593825823191682] websocket ping task scheduled every 10 seconds
+2024-06-05T07:14:22.833Z - INFO    : [index.js] connection with Janus created
+2024-06-05T07:14:22.834Z - INFO    : [connection.js] [1593825823191682] creating new session
+2024-06-05T07:14:22.842Z - INFO    : [session.js] [2355834110251933] session keep-alive task scheduled every 30000 milliseconds
+2024-06-05T07:14:22.842Z - INFO    : [connection.js] [1593825823191682] session created (id=2355834110251933)
+2024-06-05T07:14:22.843Z - INFO    : [index.js] session 2355834110251933 with Janus created
+2024-06-05T07:14:22.843Z - INFO    : [session.js] [2355834110251933] attaching new handle
+2024-06-05T07:14:22.847Z - INFO    : [session.js] [2355834110251933] handle attached (id=2669000490103966)
+2024-06-05T07:14:22.848Z - INFO    : [index.js] manager handle 2669000490103966 attached
+2024-06-05T07:16:20.462Z - INFO    : [index.js] [10.103.162.3:49980] connection with client established
+2024-06-05T07:16:20.584Z - INFO    : [index.js] [10.103.162.3:49980] join received
+2024-06-05T07:16:20.584Z - INFO    : [session.js] [2355834110251933] attaching new handle
+2024-06-05T07:16:20.586Z - INFO    : [session.js] [2355834110251933] handle attached (id=766565544726741)
+2024-06-05T07:16:20.586Z - INFO    : [index.js] [10.103.162.3:49980] videoroom publisher handle 766565544726741 attached
+joindata {"room":1234,"feed":2932335273661900,"description":"Demo Room","private_id":4162906969,"publishers":[],"display":"John_Doe_8186"}
+2024-06-05T07:16:24.262Z - INFO    : [index.js] [10.103.162.3:49980] configure received
+2024-06-05T07:16:24.290Z - INFO    : [index.js] [10.103.162.3:49980] trickle received
+2024-06-05T07:16:24.293Z - INFO    : [index.js] [10.103.162.3:49980] trickle received
+2024-06-05T07:16:24.465Z - INFO    : [index.js] [10.103.162.3:49980] trickle received
+2024-06-05T07:16:24.475Z - INFO    : [index.js] [10.103.162.3:49980] trickle received
+2024-06-05T07:16:24.480Z - INFO    : [index.js] [10.103.162.3:49980] trickle-complete received
+2024-06-05T07:16:24.701Z - INFO    : [index.js] [766565544726741] trickle event {"sdpMLineIndex":0,"candidate":"candidate:1 1 udp 2015363327 172.17.77.185 53968 typ host"}
+2024-06-05T07:16:24.702Z - INFO    : [index.js] [766565544726741] trickle event {"sdpMLineIndex":0,"candidate":"candidate:2 1 tcp 1015021823 172.17.77.185 0 typ host tcptype active"}
+2024-06-05T07:16:24.703Z - INFO    : [index.js] [766565544726741] trickle event {"sdpMLineIndex":0,"candidate":"candidate:3 1 tcp 1010827519 172.17.77.185 52197 typ host tcptype passive"}
+2024-06-05T07:16:24.703Z - INFO    : [index.js] [766565544726741] trickle event {"completed":true}
+2024-06-05T07:16:24.799Z - INFO    : [index.js] [10.103.162.3:49980] configured sent
+response {"jsep":{"type":"answer","sdp":"v=0\r\no=- 1898050915650909152 2 IN IP4 103.99.246.49\r\ns=VideoRoom 1234\r\nt=0 0\r\na=group:BUNDLE 0 1\r\na=ice-options:trickle\r\na=fingerprint:sha-256 B3:7C:63:B4:EB:39:E8:81:3C:E9:51:81:73:8B:D0:7D:F5:CE:D0:26:2A:96:EA:BD:FC:2D:E1:D6:CB:69:16:3B\r\na=extmap-allow-mixed\r\na=msid-semantic: WMS *\r\na=ice-lite\r\nm=audio 9 UDP/TLS/RTP/SAVPF 111\r\nc=IN IP4 103.99.246.49\r\na=recvonly\r\na=mid:0\r\na=rtcp-mux\r\na=ice-ufrag:wBRJ\r\na=ice-pwd:ge6FV3IcaCnGmxXLw2Lm2Q\r\na=ice-options:trickle\r\na=setup:active\r\na=rtpmap:111 opus/48000/2\r\na=fmtp:111 useinbandfec=1\r\na=extmap:1 urn:ietf:params:rtp-hdrext:ssrc-audio-level\r\na=extmap:4 urn:ietf:params:rtp-hdrext:sdes:mid\r\na=msid:janus janus0\r\na=ssrc:897320005 cname:janus\r\nm=video 9 UDP/TLS/RTP/SAVPF 102 103\r\nc=IN IP4 103.99.246.49\r\na=recvonly\r\na=mid:1\r\na=rtcp-mux\r\na=ice-ufrag:wBRJ\r\na=ice-pwd:ge6FV3IcaCnGmxXLw2Lm2Q\r\na=ice-options:trickle\r\na=setup:active\r\na=rtpmap:102 H264/90000\r\na=rtcp-fb:102 ccm fir\r\na=rtcp-fb:102 nack\r\na=rtcp-fb:102 nack pli\r\na=rtcp-fb:102 goog-remb\r\na=rtcp-fb:102 transport-cc\r\na=extmap:13 urn:3gpp:video-orientation\r\na=extmap:3 http://www.ietf.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01\r\na=extmap:5 http://www.webrtc.org/experiments/rtp-hdrext/playout-delay\r\na=extmap:4 urn:ietf:params:rtp-hdrext:sdes:mid\r\na=extmap:10 urn:ietf:params:rtp-hdrext:sdes:rtp-stream-id\r\na=extmap:11 urn:ietf:params:rtp-hdrext:sdes:repaired-rtp-stream-id\r\na=fmtp:102 level-asymmetry-allowed=1;packetization-mode=1;profile-level-id=42001f\r\na=rtpmap:103 rtx/90000\r\na=fmtp:103 apt=102\r\na=msid:janus janus1\r\na=ssrc:1970591544 cname:janus\r\n"},"room":1234,"feed":2932335273661900,"streams":[{"type":"audio","mindex":0,"mid":"0","codec":"opus","fec":true},{"type":"video","mindex":1,"mid":"1","codec":"h264","h264_profile":"42001f"}]}
+rtpstartdata {
+  room: 1234,
+  feed: 2932335273661900,
+  video_port: 9055,
+  audio_port: 9056,
+  secret: 'adminpwd',
+  audiopt: 111,
+  videopt: 126,
+  host: '127.0.0.1'
+}
+response root {
+  room: 1234,
+  feed: 2932335273661900,
+  forwarder: {
+    host: '127.0.0.1',
+    audio_stream: 1778641875,
+    audio_port: 9056,
+    video_stream: 3589149618,
+    video_port: 9055
+  }
+}
+2024-06-05T07:16:24.867Z - INFO    : [index.js] [10.103.162.3:49980] rtp-fwd-started sent
+2024-06-05T07:16:25.115Z - INFO    : [index.js] [766565544726741] webrtcup event
+2024-06-05T07:16:25.130Z - INFO    : [index.js] [766565544726741] media event {"type":"audio","receiving":true,"mid":"0"}
+2024-06-05T07:16:25.225Z - INFO    : [index.js] [766565544726741] media event {"type":"video","receiving":true,"mid":"1"}
+2024-06-05T07:16:59.496Z - INFO    : [index.js] [10.103.162.3:49980] disconnected socket
+2024-06-05T07:16:59.497Z - INFO    : [handle.js] [766565544726741] detaching handle
+2024-06-05T07:16:59.506Z - INFO    : [index.js] [766565544726741] detached event
+2024-06-05T07:17:06.685Z - INFO    : [index.js] [10.103.162.3:50071] connection with client established
+2024-06-05T07:17:06.797Z - INFO    : [index.js] [10.103.162.3:50071] join received
+2024-06-05T07:17:06.798Z - INFO    : [session.js] [2355834110251933] attaching new handle
+2024-06-05T07:17:06.800Z - INFO    : [session.js] [2355834110251933] handle attached (id=7553521969015177)
+2024-06-05T07:17:06.800Z - INFO    : [index.js] [10.103.162.3:50071] videoroom publisher handle 7553521969015177 attached
+joindata {"room":1234,"feed":6780372894529250,"description":"Demo Room","private_id":3317253220,"publishers":[],"display":"John_Doe_8186"}
+2024-06-05T07:17:10.818Z - INFO    : [index.js] [10.103.162.3:50071] configure received
+2024-06-05T07:17:10.826Z - INFO    : [index.js] [10.103.162.3:50071] trickle received
+2024-06-05T07:17:10.831Z - INFO    : [index.js] [7553521969015177] trickle event {"sdpMid":"0","sdpMLineIndex":0,"candidate":"candidate:1 1 udp 2015363327 172.17.77.185 47717 typ host"}
+2024-06-05T07:17:10.832Z - INFO    : [index.js] [7553521969015177] trickle event {"sdpMid":"0","sdpMLineIndex":0,"candidate":"candidate:2 1 tcp 1015021823 172.17.77.185 0 typ host tcptype active"}
+2024-06-05T07:17:10.832Z - INFO    : [index.js] [7553521969015177] trickle event {"sdpMid":"0","sdpMLineIndex":0,"candidate":"candidate:3 1 tcp 1010827519 172.17.77.185 41397 typ host tcptype passive"}
+2024-06-05T07:17:10.832Z - INFO    : [index.js] [7553521969015177] trickle event {"completed":true}
+2024-06-05T07:17:10.834Z - INFO    : [index.js] [10.103.162.3:50071] configured sent
+response {"jsep":{"type":"answer","sdp":"v=0\r\no=- 8985013402278712366 2 IN IP4 103.99.246.49\r\ns=VideoRoom 1234\r\nt=0 0\r\na=group:BUNDLE 0\r\na=ice-options:trickle\r\na=fingerprint:sha-256 B3:7C:63:B4:EB:39:E8:81:3C:E9:51:81:73:8B:D0:7D:F5:CE:D0:26:2A:96:EA:BD:FC:2D:E1:D6:CB:69:16:3B\r\na=extmap-allow-mixed\r\na=msid-semantic: WMS *\r\na=ice-lite\r\nm=video 9 UDP/TLS/RTP/SAVPF 102 103\r\nc=IN IP4 103.99.246.49\r\na=recvonly\r\na=mid:0\r\na=rtcp-mux\r\na=ice-ufrag:zjpt\r\na=ice-pwd:Q/hFRta5w+SXCzaWj4j0Z4\r\na=ice-options:trickle\r\na=setup:active\r\na=rtpmap:102 H264/90000\r\na=rtcp-fb:102 ccm fir\r\na=rtcp-fb:102 nack\r\na=rtcp-fb:102 nack pli\r\na=rtcp-fb:102 goog-remb\r\na=rtcp-fb:102 transport-cc\r\na=extmap:3 urn:3gpp:video-orientation\r\na=extmap:4 http://www.ietf.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01\r\na=extmap:5 http://www.webrtc.org/experiments/rtp-hdrext/playout-delay\r\na=extmap:9 urn:ietf:params:rtp-hdrext:sdes:mid\r\na=extmap:10 urn:ietf:params:rtp-hdrext:sdes:rtp-stream-id\r\na=extmap:11 urn:ietf:params:rtp-hdrext:sdes:repaired-rtp-stream-id\r\na=fmtp:102 level-asymmetry-allowed=1;packetization-mode=1;profile-level-id=42001f\r\na=rtpmap:103 rtx/90000\r\na=fmtp:103 apt=102\r\na=msid:janus janus0\r\na=ssrc:1399065678 cname:janus\r\n"},"room":1234,"feed":6780372894529250,"streams":[{"type":"video","mindex":0,"mid":"0","codec":"h264","h264_profile":"42001f"}]}
+rtpstartdata {
+  room: 1234,
+  feed: 6780372894529250,
+  video_port: 9055,
+  audio_port: 9056,
+  secret: 'adminpwd',
+  audiopt: 111,
+  videopt: 126,
+  host: '127.0.0.1'
+}
+response root {
+  room: 1234,
+  feed: 6780372894529250,
+  forwarder: { host: '127.0.0.1', video_stream: 1636256113, video_port: 9055 }
+}
+2024-06-05T07:17:10.846Z - INFO    : [index.js] [10.103.162.3:50071] rtp-fwd-started sent
+2024-06-05T07:17:10.863Z - INFO    : [index.js] [10.103.162.3:50071] trickle received
+2024-06-05T07:17:10.864Z - INFO    : [index.js] [10.103.162.3:50071] trickle-complete received
+2024-06-05T07:17:10.932Z - INFO    : [index.js] [7553521969015177] webrtcup event
+2024-06-05T07:17:10.966Z - INFO    : [index.js] [7553521969015177] media event {"type":"video","receiving":true,"mid":"0"}
