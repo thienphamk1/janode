@@ -17,3 +17,4 @@ bundle.js
 
 nssm.exe
 loggers/
+.env
