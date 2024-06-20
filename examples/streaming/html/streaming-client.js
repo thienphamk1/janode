@@ -303,12 +303,16 @@ function _setupDataChannelCallbacks(channel, isLocal) {
 async function doAnswer(offer) {
   if (!streamingPeerConnection) {
     const pc = new RTCPeerConnection({
-      'iceServers': [{
-        urls: 'stun:stun.l.google.com:19302'
-      }],
+      'iceServers': [
+        { urls: 'stun:stun.l.google.com:19302' },
+        {
+          urls: 'turn:global.relay.metered.ca:80',
+          credential: '6wOqhruvUqpyKmJ1',
+          username: '74a33ac423da850991740bb4'
+        }
+      ],
       //'sdpSemantics': 'unified-plan',
     });
-
     // inspect the offer.sdp for m=application lines before creating the DataChannel
     if (/m=application [1-9]\d*/.test(offer.sdp)) {
       const localChannel = pc.createDataChannel('JanusDataChannel');

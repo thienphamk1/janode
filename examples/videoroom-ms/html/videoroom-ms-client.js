@@ -628,9 +628,15 @@ async function _restartSubscriber() {
 async function doOffer(feed, display) {
   if (!pubPc) {
     const pc = new RTCPeerConnection({
-      'iceServers': [{
-        urls: 'stun:stun.l.google.com:19302'
-      }],
+      'iceServers': [
+        { urls: 'stun:stun.l.google.com:19302' },
+        {
+          urls: 'turn:global.relay.metered.ca:80',
+          credential: '6wOqhruvUqpyKmJ1',
+          username: '74a33ac423da850991740bb4'
+        }
+      ],
+      //'sdpSemantics': 'unified-plan',
     });
 
     pc.onnegotiationneeded = event => console.log('pc.onnegotiationneeded', event);
