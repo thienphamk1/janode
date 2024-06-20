@@ -8,7 +8,7 @@ export default {
     retry_time_secs: 10
   },
   web: {
-    port: 4444,
+    port: 17801,
     bind: '0.0.0.0',
     // key: '/path/to/key.pem',
     // cert: '/path/to/cert.pem'

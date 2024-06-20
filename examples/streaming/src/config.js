@@ -12,7 +12,7 @@ export default {
         // recording_path: '/opt/janus/share/janus/recordings/'
     },
     web: {
-        port: 4445,
+        port: 17802,
         bind: '0.0.0.0',
         key: undefined,
         cert: undefined

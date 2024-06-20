@@ -4,7 +4,6 @@ import { readFileSync } from 'fs';
 import Janode from '../../../src/janode.js';
 import config from './config.js';
 const { janode: janodeConfig, web: serverConfig } = config;
-
 import { fileURLToPath } from 'url';
 import { dirname, basename } from 'path';
 const __filename = fileURLToPath(import.meta.url);
@@ -13,9 +12,11 @@ const __dirname = dirname(__filename);
 const { Logger } = Janode;
 const LOG_NS = `[${basename(__filename)}]`;
 import VideoRoomPlugin from '../../../src/plugins/videoroom-plugin.js';
-
+import LiveController from '../../../src/dtutube/controllers/live.js';
+import DBConnection from '../../../src/dtutube/db.js';
 import express from 'express';
 const app = express();
+DBConnection();
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*'); // Cho phép mọi nguồn (origin) hoặc chỉ định một nguồn cụ thể
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
@@ -124,6 +125,7 @@ function initFrontEnd() {
 
   io.on('connection', function (socket) {
     const remote = `[${socket.request.connection.remoteAddress}:${socket.request.connection.remotePort}]`;
+    let roomLive = null;
     Logger.info(`${LOG_NS} ${remote} connection with client established`);
 
     const msHandles = (function () {
@@ -176,9 +178,11 @@ function initFrontEnd() {
     socket.on('join', async (evtdata = {}) => {
       Logger.info(`${LOG_NS} ${remote} join received`);
       const { _id, data: joindata = {} } = evtdata;
-
+      roomLive = await LiveController.getLiveById(joindata.room);
+      console.log(roomLive);
+      if (!roomLive) return replyError(socket, 'Room live not found', joindata, _id);
+      if (roomLive.status === 'Ended') return replyError(socket, 'Room live is ended', joindata, _id);
       if (!checkSessions(janodeSession, true, socket, evtdata)) return;
-
       let pubHandle;
 
       try {
@@ -340,19 +344,18 @@ function initFrontEnd() {
 
       const handle = msHandles.getHandleByFeed(confdata.feed);
       if (!checkSessions(janodeSession, handle, socket, evtdata)) return;
-
+      if (!roomLive) return replyError(socket, 'Room live not found', confdata, _id);
       try {
         const response = await handle.configure(confdata);
         delete response.configured;
         replyEvent(socket, 'configured', response, _id);
         Logger.info(`${LOG_NS} ${remote} configured sent`);
-
         console.log("response", JSON.stringify(response));
         const rtpstartdata = {
           room: confdata.room,
           feed: confdata.feed,
-          video_port: 9055,
-          audio_port: 9056,
+          video_port: Number(roomLive.videoPort),
+          audio_port: Number(roomLive.audioPort),
           secret: 'adminpwd',
           audiopt: 111,
           videopt: 126,
