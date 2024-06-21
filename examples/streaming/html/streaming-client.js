@@ -306,10 +306,10 @@ async function doAnswer(offer) {
       'iceServers': [
         { urls: 'stun:stun.l.google.com:19302' },
         {
-          urls: 'turn:global.relay.metered.ca:80',
-          credential: '6wOqhruvUqpyKmJ1',
-          username: '74a33ac423da850991740bb4'
-        }
+            urls: "turn:standard.relay.metered.ca:80",
+            username: "74a33ac423da850991740bb4",
+            credential: "6wOqhruvUqpyKmJ1"
+        },
       ],
       //'sdpSemantics': 'unified-plan',
     });

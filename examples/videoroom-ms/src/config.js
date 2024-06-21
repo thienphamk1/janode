@@ -10,7 +10,7 @@ export default {
   web: {
     port: 17801,
     bind: '0.0.0.0',
-    // key: '/path/to/key.pem',
+    // key: '/path/to/key.pem',l
     // cert: '/path/to/cert.pem'
   }
 };
