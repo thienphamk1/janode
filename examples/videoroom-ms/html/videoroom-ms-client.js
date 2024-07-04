@@ -631,10 +631,15 @@ async function doOffer(feed, display) {
       'iceServers': [
         { urls: 'stun:stun.l.google.com:19302' },
         {
-          urls: "turn:standard.relay.metered.ca:80",
-          username: "74a33ac423da850991740bb4",
-          credential: "6wOqhruvUqpyKmJ1"
+          urls: "turn:34.125.2.193:3478",
+          username: "username",
+          credential: "password"
         },
+        // {
+        //   urls: "turn:standard.relay.metered.ca:80",
+        //   username: "74a33ac423da850991740bb4",
+        //   credential: "6wOqhruvUqpyKmJ1"
+        // },
       ],
       //'sdpSemantics': 'unified-plan',
     });
