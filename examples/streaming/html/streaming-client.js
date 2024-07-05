@@ -13,13 +13,19 @@ const myPin = getURLParameter('pin') || null;
 let decoder;
 
 const button = document.getElementById('button');
+const stopButton = document.getElementById('stop-watch');
 button.onclick = () => {
-  if (socket.connected)
-    socket.disconnect();
-  else
+  button.style.display = 'none';
+  stopButton.style.display = 'block';
+  if (!socket.connected)
     socket.connect();
 };
-
+stopButton.onclick = () => {
+  stopButton.style.display = 'none';
+  button.style.display = 'block';
+  if (socket.connected)
+    socket.disconnect();
+}
 function getId() {
   return Math.floor(Number.MAX_SAFE_INTEGER * Math.random());
 }
@@ -223,6 +229,8 @@ socket.on('connect', () => {
 socket.on('disconnect', () => {
   console.log('socket disconnected');
   stopAllStreams();
+  stopButton.style.display = 'none';
+  button.style.display = 'block';
   closePC();
 });
 
