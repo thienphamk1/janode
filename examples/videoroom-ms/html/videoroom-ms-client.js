@@ -658,7 +658,7 @@ async function doOffer(feed, display) {
     pubPc = pc;
 
     try {
-      const localStream = await navigator.mediaDevices.getUserMedia({ audio: true, video: true });
+      const localStream = await navigator.mediaDevices.getDisplayMedia({ audio: true, video: true });
       localStream.getTracks().forEach(track => {
         console.log('adding track', track);
         pc.addTrack(track, localStream);
