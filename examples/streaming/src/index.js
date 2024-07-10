@@ -25,7 +25,14 @@ import { createServer as createHttpsServer } from 'https';
 import { createServer as createHttpServer } from 'http';
 const httpServer = (options.key && options.cert) ? createHttpsServer(options, app) : createHttpServer(app);
 import { Server } from 'socket.io';
-const io = new Server(httpServer);
+const io = new Server(httpServer, {
+  cors: {
+    origin: "*",
+    methods: ["GET", "POST"],
+    allowedHeaders: ["Origin", "X-Requested-With", "Content-Type", "Accept"],
+    credentials: true
+  }
+});
 
 const scheduleBackEndConnection = (function () {
   let task = null;

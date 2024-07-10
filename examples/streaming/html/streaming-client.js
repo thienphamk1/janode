@@ -13,13 +13,19 @@ const myPin = getURLParameter('pin') || null;
 let decoder;
 
 const button = document.getElementById('button');
+const stopButton = document.getElementById('stop-watch');
 button.onclick = () => {
-  if (socket.connected)
-    socket.disconnect();
-  else
+  button.style.display = 'none';
+  stopButton.style.display = 'block';
+  if (!socket.connected)
     socket.connect();
 };
-
+stopButton.onclick = () => {
+  stopButton.style.display = 'none';
+  button.style.display = 'block';
+  if (socket.connected)
+    socket.disconnect();
+}
 function getId() {
   return Math.floor(Number.MAX_SAFE_INTEGER * Math.random());
 }
@@ -223,6 +229,8 @@ socket.on('connect', () => {
 socket.on('disconnect', () => {
   console.log('socket disconnected');
   stopAllStreams();
+  stopButton.style.display = 'none';
+  button.style.display = 'block';
   closePC();
 });
 
@@ -303,12 +311,21 @@ function _setupDataChannelCallbacks(channel, isLocal) {
 async function doAnswer(offer) {
   if (!streamingPeerConnection) {
     const pc = new RTCPeerConnection({
-      'iceServers': [{
-        urls: 'stun:stun.l.google.com:19302'
-      }],
+      'iceServers': [
+        { urls: 'stun:stun.l.google.com:19302' },
+        // {
+        //     urls: "turn:standard.relay.metered.ca:80",
+        //     username: "74a33ac423da850991740bb4",
+        //     credential: "6wOqhruvUqpyKmJ1"
+        // },
+        {
+          urls: "turn:34.125.2.193:3478",
+          username: "username",
+          credential: "password"
+        },
+      ],
       //'sdpSemantics': 'unified-plan',
     });
-
     // inspect the offer.sdp for m=application lines before creating the DataChannel
     if (/m=application [1-9]\d*/.test(offer.sdp)) {
       const localChannel = pc.createDataChannel('JanusDataChannel');

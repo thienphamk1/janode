@@ -3,10 +3,10 @@ build
 out
 .vscode
 
-config.js
+# config.js
 bundle.js
 *.json
-*.log
+.log
 *.pem
 *.crt
 *.sh
@@ -14,3 +14,7 @@ bundle.js
 !.eslintrc.json
 !package.json
 !package-lock.json
+
+nssm.exe
+loggers/
+.env
